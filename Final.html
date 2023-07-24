@@ -1,0 +1,1666 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif !important;
+            font-weight: 500 !important;
+            /* color: #0000; */
+            font-size: 14px !important;
+        }
+
+        table.dataTable {
+            width: 100% !important;
+        }
+
+        .dataTables_scrollHeadInner {
+            width: 100% !important;
+        }
+
+        .brd-gry {
+            border: 1px solid rgb(207, 207, 207);
+        }
+
+        .pad-12 {
+            padding: 10px 20px !important;
+        }
+
+
+        .tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+        }
+
+        /* Style the buttons that are used to open the tab content */
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+        }
+
+        /* Change background color of buttons on hover */
+        .tab button:hover {
+            background-color: #ddd;
+        }
+
+        /* Create an active/current tablink class */
+        .tab button.active {
+            background-color: #ccc;
+        }
+
+        /* Style the tab content */
+        .tabcontent {
+            display: none;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="container">
+        <h3 class="text-primary text-center fw-bold  my-4">Quest2Travel Mumbai Extension.</h3>
+        <div class="row">
+
+            <div class="tab">
+                <button class="tablinks active col-xxl-6" onclick="openCity(event, 'London')">Dipartment</button>
+                <button class="tablinks col-xxl-6" onclick="openCity(event, 'Paris')">All In One</button>
+            </div>
+
+            <!-- Tab content -->
+            <div id="London" class="tabcontent" style="display: block;">
+
+                <div class="container">
+                    <div class="row my-4">
+                        <div class="col-xl-2"></div>
+                        <div class="col-xl-8">
+                            <div class="accordion" id="accordionExample">
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed pad-12" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#c1" aria-expanded="true" aria-controls="c1">
+                                            <b>1. General</b>
+                                        </button>
+                                    </h2>
+            
+                                    <div id="c1" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <table id="example1" class="display nowrap brd-gry" style="width:100%">
+                                                <thead class="mt-2 ">
+                                                    <tr class="table-success">
+                                                        <th>No</th>
+                                                        <th>Name</th>
+                                                        <th>Phone NO</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="table-success">
+                                                        <td>1</td>
+                                                        <td>Reception</td>
+                                                        <td>111, 112, 308</td>
+                                                    </tr>
+                                                    <tr class="table-success">
+                                                        <td>2</td>
+                                                        <td>Board Room</td>
+                                                        <td>117</td>
+                                                    </tr>
+                                                    <tr class="table-success">
+                                                        <td>3</td>
+                                                        <td>Server Room</td>
+                                                        <td>300</td>
+                                                    </tr>
+                                                    <tr class="table-success">
+                                                        <td>4</td>
+                                                        <td>Meeting Room 1 </td>
+                                                        <td>107</td>
+                                                    </tr>
+                                                    <tr class="table-success">
+                                                        <td>5</td>
+                                                        <td>Meeting Room 2</td>
+                                                        <td>108</td>
+                                                    </tr>
+                                                    <tr class="table-success">
+                                                        <td>6</td>
+                                                        <td>Dispatch </td>
+                                                        <td>126</td>
+                                                    </tr>
+                                                    <tr class="table-success">
+                                                        <td>7</td>
+                                                        <td>Pantry </td>
+                                                        <td>195</td>
+                                                    </tr>
+            
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed pad-12" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#c2" aria-expanded="false" aria-controls="c2">
+                                            <b>2. Cabin</b>
+                                        </button>
+                                    </h2>
+            
+                                    <div id="c2" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <table id="example2" class="display nowrap brd-gry" style="width:100%">
+                                                <thead>
+                                                    <tr>
+                                                        <th>No</th>
+                                                        <th>Name</th>
+                                                        <th>Phone NO</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>Abhay Sir</td>
+                                                        <td>101, 301</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>Vacant</td>
+                                                        <td>303</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>3</td>
+                                                        <td>Bhavin Sir</td>
+                                                        <td>103</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>4</td>
+                                                        <td>Vacant</td>
+                                                        <td>302</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>5</td>
+                                                        <td>Vacant</td>
+                                                        <td> - </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>6</td>
+                                                        <td>Anjali madam</td>
+                                                        <td>105 , 342</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>7</td>
+                                                        <td>Kapil Pagrut</td>
+                                                        <td>110</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>8</td>
+                                                        <td>Sunil Rane</td>
+                                                        <td>319, 109</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>9</td>
+                                                        <td>Jeetendra Pagdhare</td>
+                                                        <td>116, 313</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>10</td>
+                                                        <td>Randolf Ferreira</td>
+                                                        <td>162</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>11</td>
+                                                        <td>Rahul Nagle</td>
+                                                        <td>114</td>
+                                                    </tr>
+            
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed pad-12" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#c3" aria-expanded="false" aria-controls="c3">
+                                            <b>3. Domestic</b>
+                                        </button>
+                                    </h2>
+                                    <div id="c3" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <table id="example3" class="display nowrap brd-gry" style="width:100%">
+                                                <thead>
+                                                    <tr>
+                                                        <th>No</th>
+                                                        <th>Name</th>
+                                                        <th>Phone NO</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>Aparna Prabhu</td>
+                                                        <td>115</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>Anil Jaiswar</td>
+                                                        <td>140</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>3</td>
+                                                        <td>Yusuf Khan</td>
+                                                        <td>150</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>4</td>
+                                                        <td>Saabu Siddique</td>
+                                                        <td>143</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>5</td>
+                                                        <td>Dharamdas Kori</td>
+                                                        <td>144</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>6</td>
+                                                        <td>Vandana Meher</td>
+                                                        <td>151</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>7</td>
+                                                        <td>Vishal Salekar</td>
+                                                        <td>152</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>8</td>
+                                                        <td>Pooja Kshirsagar</td>
+                                                        <td>153</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>9</td>
+                                                        <td>Odellia Vessaokar</td>
+                                                        <td>312</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>10</td>
+                                                        <td>Sarvesh Harwande</td>
+                                                        <td>155</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>11</td>
+                                                        <td>Nikita Mahyavanshi</td>
+                                                        <td>156</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>12</td>
+                                                        <td>Jyoti Amberkar</td>
+                                                        <td>157</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>13</td>
+                                                        <td>Sumeet Mhatre</td>
+                                                        <td>158</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>14</td>
+                                                        <td>Blank</td>
+                                                        <td>159</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>15</td>
+                                                        <td>Evita Pereira</td>
+                                                        <td>154</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>16</td>
+                                                        <td>Bonita Correira</td>
+                                                        <td>145</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>17</td>
+                                                        <td>Neha Kharwara</td>
+                                                        <td>161</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>18</td>
+                                                        <td>Rahul Pagare</td>
+                                                        <td>142</td>
+                                                    </tr>
+                                                    
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed pad-12" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#c4" aria-expanded="false" aria-controls="c4">
+                                            <b>4. Account</b>
+                                        </button>
+                                    </h2>
+                                    <div id="c4" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <table id="example4" class="display nowrap" style="width:100%">
+                                                <thead>
+                                                    <tr>
+                                                        <th>No</th>
+                                                        <th>Name</th>
+                                                        <th>Phone NO</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>Dinesh Kadam</td>
+                                                        <td>171</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>Akshata Surve</td>
+                                                        <td>166</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>3</td>
+                                                        <td>Vidyasagar/Mustafa</td>
+                                                        <td>167</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>4</td>
+                                                        <td>Akshay Sawant</td>
+                                                        <td>173</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>5</td>
+                                                        <td>Savita Poojary</td>
+                                                        <td>169</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>6</td>
+                                                        <td>Simran Khot</td>
+                                                        <td>168</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>7</td>
+                                                        <td>Madhuri Parbalkar </td>
+                                                        <td>170</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>8</td>
+                                                        <td>Tushar Ingle/Pranali</td>
+                                                        <td>165</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>8</td>
+                                                        <td>Mangala Bhosale</td>
+                                                        <td>176</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>9</td>
+                                                        <td>Mahendra Bugde/Kirti</td>
+                                                        <td>147</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>10</td>
+                                                        <td>Sunil/Sandesh</td>
+                                                        <td>198</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>11</td>
+                                                        <td>Deepak/Prasad</td>
+                                                        <td>315</td>
+                                                    </tr>
+                                             
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed pad-12" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#c5" aria-expanded="false" aria-controls="c5">
+                                            <b>5. GST</b>
+                                        </button>
+                                    </h2>
+                                    <div id="c5" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <table id="example5" class="display nowrap" style="width:100%">
+                                                <thead>
+                                                    <tr>
+                                                        <th>No</th>
+                                                        <th>Name</th>
+                                                        <th>Phone NO</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>Baskar Natarajan</td>
+                                                        <td>342</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>Vaishali/Supriya</td>
+                                                        <td>126</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>3</td>
+                                                        <td>Atul Tambe</td>
+                                                        <td>197</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed pad-12" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#c6" aria-expanded="false" aria-controls="c6">
+                                            <b>6. Hotels</b>
+                                        </button>
+                                    </h2>
+                                    <div id="c6" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <table id="example6" class="display nowrap" style="width:100%">
+                                                <thead>
+                                                    <tr>
+                                                        <th>No</th>
+                                                        <th>Name</th>
+                                                        <th>Phone NO</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>Shawn Serrao</td>
+                                                        <td>141</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>Lovely D'souza</td>
+                                                        <td>160</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>3</td>
+                                                        <td>tarranum chunara</td>
+                                                        <td>340</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>4</td>
+                                                        <td>Akhil Patel/Aniket</td>
+                                                        <td>121</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed pad-12" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#c7" aria-expanded="false" aria-controls="c7">
+                                            <b>7. Visas</b>
+                                        </button>
+                                    </h2>
+                                    <div id="c7" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <table id="example7" class="display nowrap" style="width:100%">
+                                                <thead>
+                                                    <tr>
+                                                        <th>No</th>
+                                                        <th>Name</th>
+                                                        <th>Phone NO</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>Pranay</td>
+                                                        <td>122</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>Shiva Naikar</td>
+                                                        <td>118</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>3</td>
+                                                        <td>Sunil Kanojia</td>
+                                                        <td>119</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>4</td>
+                                                        <td>Valentina</td>
+                                                        <td>224</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed pad-12" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#c8" aria-expanded="false" aria-controls="c8">
+                                            <b>8. HR Department</b>
+                                        </button>
+                                    </h2>
+                                    <div id="c8" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <table id="example8" class="display nowrap" style="width:100%">
+                                                <thead>
+                                                    <tr>
+                                                        <th>No</th>
+                                                        <th>Name</th>
+                                                        <th>Phone NO</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>Harsha Bhingarde</td>
+                                                        <td>177</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>Niki Sarambalkar</td>
+                                                        <td>178</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed pad-12" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#c9" aria-expanded="false" aria-controls="c9">
+                                            <b>9. Sales</b>
+                                        </button>
+                                    </h2>
+                                    <div id="c9" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <table id="example9" class="display nowrap" style="width:100%">
+                                                <thead>
+                                                    <tr>
+                                                        <th>No</th>
+                                                        <th>Name</th>
+                                                        <th>Phone NO</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>Rajvee Gangar/Anthol</td>
+                                                        <td>314</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>Errol Loreno/Priyanka</td>
+                                                        <td>104</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>3</td>
+                                                        <td>Sumit Nazre</td>
+                                                        <td>304</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>4</td>
+                                                        <td>Yugal Luhana</td>
+                                                        <td>102</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed pad-12" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#c10" aria-expanded="false" aria-controls="c10">
+                                            <b>10. Railway</b>
+                                        </button>
+                                    </h2>
+                                    <div id="c10" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <table id="example10" class="display nowrap" style="width:100%">
+                                                <thead>
+                                                    <tr>
+                                                        <th>No</th>
+                                                        <th>Name</th>
+                                                        <th>Phone NO</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>Rohit Jaiswar</td>
+                                                        <td>148</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>Vaibhav</td>
+                                                        <td>149</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed pad-12" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#c11" aria-expanded="false" aria-controls="c11">
+                                            <b>11. Internation</b>
+                                        </button>
+                                    </h2>
+                                    <div id="c11" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <table id="example11" class="display nowrap" style="width:100%">
+                                                <thead>
+                                                    <tr>
+                                                        <th>No</th>
+                                                        <th>Name</th>
+                                                        <th>Phone NO</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>Shweta/ABG</td>
+                                                        <td>129 / 132</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>Mitesh/ABG</td>
+                                                        <td>125/192</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>3</td>
+                                                        <td>Rohit / ABG</td>
+                                                        <td>128/311</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>4</td>
+                                                        <td>Siddhesh/ABG</td>
+                                                        <td>123/188</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>5</td>
+                                                        <td>Plave/ABG</td>
+                                                        <td>130 / 131</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>6</td>
+                                                        <td>Bhikaji/ABG</td>
+                                                        <td>133/134</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>7</td>
+                                                        <td>Harshada / ABG</td>
+                                                        <td>135 / 193</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>8</td>
+                                                        <td>Kuldeep Gupta</td>
+                                                        <td>136/127</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>9</td>
+                                                        <td>Vacant</td>
+                                                        <td>310</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>10</td>
+                                                        <td>Nandini / ABG</td>
+                                                        <td>138 / 189</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>11</td>
+                                                        <td>Prabhakar / ABG</td>
+                                                        <td>139 / 190</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>12</td>
+                                                        <td>Wasim/ABG</td>
+                                                        <td>137/191</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>13</td>
+                                                        <td>Vacant</td>
+                                                        <td>174/179</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>14</td>
+                                                        <td>-</td>
+                                                        <td>120</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed pad-12" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#c12" aria-expanded="false" aria-controls="c12">
+                                            <b>12. IT</b>
+                                        </button>
+                                    </h2>
+                                    <div id="c12" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <table id="example12" class="display nowrap" style="width:100%">
+                                                <thead>
+                                                    <tr>
+                                                        <th>No</th>
+                                                        <th>Name</th>
+                                                        <th>Phone NO</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>Rupesh Joshi</td>
+                                                        <td>182</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>Anupam Redij</td>
+                                                        <td>330</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>3</td>
+                                                        <td>Vrushali Pagrut</td>
+                                                        <td>186</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>4</td>
+                                                        <td>Richi/Ravinderkaur</td>
+                                                        <td>317</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>5</td>
+                                                        <td>Rima Mehta</td>
+                                                        <td>180</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>6</td>
+                                                        <td>Manoj Patil</td>
+                                                        <td>181</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>7</td>
+                                                        <td>Vinod Wankhade</td>
+                                                        <td>194</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>8</td>
+                                                        <td>Mahendra Ratnakar</td>
+                                                        <td>184</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>9</td>
+                                                        <td>Ashish Parkar</td>
+                                                        <td>113</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>10</td>
+                                                        <td>Vacant</td>
+                                                        <td>185</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>11</td>
+                                                        <td>Shweta S</td>
+                                                        <td>163</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>12</td>
+                                                        <td>Chandrashekar</td>
+                                                        <td>317</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>13</td>
+                                                        <td>Pallavi Deshpande</td>
+                                                        <td>318</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>14</td>
+                                                        <td>Ankul Gandhe</td>
+                                                        <td>305</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>15</td>
+                                                        <td>Faiz/Suraj</td>
+                                                        <td>337</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>16</td>
+                                                        <td>Divyatva</td>
+                                                        <td>309</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>17</td>
+                                                        <td>Pravin</td>
+                                                        <td>107</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>18</td>
+                                                        <td>Darshan/Abuzar</td>
+                                                        <td>353</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>19</td>
+                                                        <td>Bhagyashri/Simran</td>
+                                                        <td>306</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>20</td>
+                                                        <td>Bhavik/Vijay</td>
+                                                        <td>338</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>21</td>
+                                                        <td>Meghana/Rajendra</td>
+                                                        <td>187</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>22</td>
+                                                        <td>Shubham/Shilpa</td>
+                                                        <td>164</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>23</td>
+                                                        <td>Himanshu</td>
+                                                        <td>196</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+            
+            
+            
+                            </div>
+                        </div>
+                        <div class="col-xl-2"></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="Paris" class="tabcontent">
+                <div class="row my-4">
+                    <div class="col-xl-2"></div>
+                    <div class="col-xl-8">
+                        <table id="example" class="display nowrap brd-gry" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th>Department</th>
+                                    <th>Name</th>
+                                    <th>Phone No</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>General</td>
+                                    <td>Reception</td>
+                                    <td>111, 112, 308</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>General</td>
+                                    <td>Board Room</td>
+                                    <td>117</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>General</td>
+                                    <td>Server Room</td>
+                                    <td>300</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>General</td>
+                                    <td>Meeting Room 1 </td>
+                                    <td>107</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>General</td>
+                                    <td>Meeting Room 2</td>
+                                    <td>108</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>General</td>
+                                    <td>Dispatch </td>
+                                    <td>126</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>General</td>
+                                    <td>Pantry </td>
+                                    <td>195</td>
+                                </tr>
+
+                                <tr>
+                                    <td>8</td>
+                                    <td>Cabin</td>
+                                    <td>Abhay Sir</td>
+                                    <td>101, 301</td>
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td>Cabin</td>
+                                    <td>Vacant</td>
+                                    <td>303</td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td>Cabin</td>
+                                    <td>Bhavin Sir</td>
+                                    <td>103</td>
+                                </tr>
+                                <tr>
+                                    <td>11</td>
+                                    <td>Cabin</td>
+                                    <td>Vacant</td>
+                                    <td>302</td>
+                                </tr>
+                                <tr>
+                                    <td>12</td>
+                                    <td>Cabin</td>
+                                    <td>Vacant</td>
+                                    <td> - </td>
+                                </tr>
+                                <tr>
+                                    <td>13</td>
+                                    <td>Cabin</td>
+                                    <td>Anjali madam</td>
+                                    <td>105 , 342</td>
+                                </tr>
+                                <tr>
+                                    <td>14</td>
+                                    <td>Cabin</td>
+                                    <td>Kapil Pagrut</td>
+                                    <td>110</td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>Cabin</td>
+                                    <td>Sunil Rane</td>
+                                    <td>319, 109</td>
+                                </tr>
+                                <tr>
+                                    <td>15</td>
+                                    <td>Cabin</td>
+                                    <td>Jeetendra Pagdhare</td>
+                                    <td>116, 313</td>
+                                </tr>
+                                <tr>
+                                    <td>16</td>
+                                    <td>Cabin</td>
+                                    <td>Randolf Ferreira</td>
+                                    <td>162</td>
+                                </tr>
+                                <tr>
+                                    <td>17</td>
+                                    <td>Cabin</td>
+                                    <td>Rahul Nagle</td>
+                                    <td>114</td>
+                                </tr>
+
+
+                                <tr>
+                                    <td>18</td>
+                                    <td>Domestic</td>
+                                    <td>Aparna Prabhu</td>
+                                    <td>115</td>
+                                </tr>
+                                <tr>
+                                    <td>19</td>
+                                    <td>Domestic</td>
+                                    <td>Anil Jaiswar</td>
+                                    <td>140</td>
+                                </tr>
+                                <tr>
+                                    <td>20</td>
+                                    <td>Domestic</td>
+                                    <td>Yusuf Khan</td>
+                                    <td>150</td>
+                                </tr>
+                                <tr>
+                                    <td>21</td>
+                                    <td>Domestic</td>
+                                    <td>Saabu Siddique</td>
+                                    <td>143</td>
+                                </tr>
+                                <tr>
+                                    <td>22</td>
+                                    <td>Domestic</td>
+                                    <td>Dharamdas Kori</td>
+                                    <td>144</td>
+                                </tr>
+                                <tr>
+                                    <td>23</td>
+                                    <td>Domestic</td>
+                                    <td>Vandana Meher</td>
+                                    <td>151</td>
+                                </tr>
+                                <tr>
+                                    <td>24</td>
+                                    <td>Domestic</td>
+                                    <td>Vishal Salekar</td>
+                                    <td>152</td>
+                                </tr>
+                                <tr>
+                                    <td>25</td>
+                                    <td>Domestic</td>
+                                    <td>Pooja Kshirsagar</td>
+                                    <td>153</td>
+                                </tr>
+                                <tr>
+                                    <td>26</td>
+                                    <td>Domestic</td>
+                                    <td>Odellia Vessaokar</td>
+                                    <td>312</td>
+                                </tr>
+                                <tr>
+                                    <td>28</td>
+                                    <td>Domestic</td>
+                                    <td>Sarvesh Harwande</td>
+                                    <td>155</td>
+                                </tr>
+                                <tr>
+                                    <td>29</td>
+                                    <td>Domestic</td>
+                                    <td>Nikita Mahyavanshi</td>
+                                    <td>156</td>
+                                </tr>
+                                <tr>
+                                    <td>30</td>
+                                    <td>Domestic</td>
+                                    <td>Jyoti Amberkar</td>
+                                    <td>157</td>
+                                </tr>
+                                <tr>
+                                    <td>31</td>
+                                    <td>Domestic</td>
+                                    <td>Sumeet Mhatre</td>
+                                    <td>158</td>
+                                </tr>
+                                <tr>
+                                    <td>32</td>
+                                    <td>Domestic</td>
+                                    <td>Blank</td>
+                                    <td>159</td>
+                                </tr>
+                                <tr>
+                                    <td>33</td>
+                                    <td>Domestic</td>
+                                    <td>Evita Pereira</td>
+                                    <td>154</td>
+                                </tr>
+                                <tr>
+                                    <td>34</td>
+                                    <td>Domestic</td>
+                                    <td>Bonita Correira</td>
+                                    <td>145</td>
+                                </tr>
+                                <tr>
+                                    <td>35</td>
+                                    <td>Domestic</td>
+                                    <td>Neha Kharwara</td>
+                                    <td>161</td>
+                                </tr>
+                                <tr>
+                                    <td>36</td>
+                                    <td>Domestic</td>
+                                    <td>Rahul Pagare</td>
+                                    <td>142</td>
+                                </tr>
+
+
+                                <tr>
+                                    <td>37</td>
+                                    <td>Account</td>
+                                    <td>Dinesh Kadam</td>
+                                    <td>171</td>
+                                </tr>
+                                <tr>
+                                    <td>38</td>
+                                    <td>Account</td>
+                                    <td>Akshata Surve</td>
+                                    <td>166</td>
+                                </tr>
+                                <tr>
+                                    <td>39</td>
+                                    <td>Account</td>
+                                    <td>Vidyasagar/Mustafa</td>
+                                    <td>167</td>
+                                </tr>
+                                <tr>
+                                    <td>40</td>
+                                    <td>Account</td>
+                                    <td>Akshay Sawant</td>
+                                    <td>173</td>
+                                </tr>
+                                <tr>
+                                    <td>41</td>
+                                    <td>Account</td>
+                                    <td>Savita Poojary</td>
+                                    <td>169</td>
+                                </tr>
+                                <tr>
+                                    <td>42</td>
+                                    <td>Account</td>
+                                    <td>Simran Khot</td>
+                                    <td>168</td>
+                                </tr>
+                                <tr>
+                                    <td>43</td>
+                                    <td>Account</td>
+                                    <td>Madhuri Parbalkar </td>
+                                    <td>170</td>
+                                </tr>
+                                <tr>
+                                    <td>44</td>
+                                    <td>Account</td>
+                                    <td>Tushar Ingle/Pranali</td>
+                                    <td>165</td>
+                                </tr>
+                                <tr>
+                                    <td>45</td>
+                                    <td>Account</td>
+                                    <td>Mangala Bhosale</td>
+                                    <td>176</td>
+                                </tr>
+                                <tr>
+                                    <td>46</td>
+                                    <td>Account</td>
+                                    <td>Mahendra Bugde/Kirti</td>
+                                    <td>147</td>
+                                </tr>
+                                <tr>
+                                    <td>47</td>
+                                    <td>Account</td>
+                                    <td>Sunil/Sandesh</td>
+                                    <td>198</td>
+                                </tr>
+                                <tr>
+                                    <td>48</td>
+                                    <td>Account</td>
+                                    <td>Deepak/Prasad</td>
+                                    <td>315</td>
+                                </tr>
+
+                                <tr>
+                                    <td>49</td>
+                                    <td>GST</td>
+                                    <td>Baskar Natarajan</td>
+                                    <td>342</td>
+                                </tr>
+                                <tr>
+                                    <td>50</td>
+                                    <td>GST</td>
+                                    <td>Vaishali/Supriya</td>
+                                    <td>126</td>
+                                </tr>
+                                <tr>
+                                    <td>51</td>
+                                    <td>GST</td>
+                                    <td>Atul Tambe</td>
+                                    <td>197</td>
+                                </tr>
+
+                                <tr>
+                                    <td>52</td>
+                                    <td>Hotels</td>
+                                    <td>Shawn Serrao</td>
+                                    <td>141</td>
+                                </tr>
+                                <tr>
+                                    <td>53</td>
+                                    <td>Hotels</td>
+                                    <td>Lovely D'souza</td>
+                                    <td>160</td>
+                                </tr>
+                                <tr>
+                                    <td>54</td>
+                                    <td>Hotels</td>
+                                    <td>tarranum chunara</td>
+                                    <td>340</td>
+                                </tr>
+                                <tr>
+                                    <td>55</td>
+                                    <td>Hotels</td>
+                                    <td>Akhil Patel/Aniket</td>
+                                    <td>121</td>
+                                </tr>
+
+                                <tr>
+                                    <td>56</td>
+                                    <td>Visas</td>
+                                    <td>Pranay</td>
+                                    <td>122</td>
+                                </tr>
+                                <tr>
+                                    <td>57</td>
+                                    <td>Visas</td>
+                                    <td>Shiva Naikar</td>
+                                    <td>118</td>
+                                </tr>
+                                <tr>
+                                    <td>58</td>
+                                    <td>Visas</td>
+                                    <td>Sunil Kanojia</td>
+                                    <td>119</td>
+                                </tr>
+                                <tr>
+                                    <td>59</td>
+                                    <td>Visas</td>
+                                    <td>Valentina</td>
+                                    <td>224</td>
+                                </tr>
+
+                                <tr>
+                                    <td>60</td>
+                                    <td>HR Department</td>
+                                    <td>Harsha Bhingarde</td>
+                                    <td>177</td>
+                                </tr>
+                                <tr>
+                                    <td>61</td>
+                                    <td>HR Department</td>
+                                    <td>Niki Sarambalkar</td>
+                                    <td>178</td>
+                                </tr>
+
+                                <tr>
+                                    <td>62</td>
+                                    <td>Sales</td>
+                                    <td>Rajvee Gangar/Anthol</td>
+                                    <td>314</td>
+                                </tr>
+                                <tr>
+                                    <td>63</td>
+                                    <td>Sales</td>
+                                    <td>Errol Loreno/Priyanka</td>
+                                    <td>104</td>
+                                </tr>
+                                <tr>
+                                    <td>64</td>
+                                    <td>Sales</td>
+                                    <td>Sumit Nazre</td>
+                                    <td>304</td>
+                                </tr>
+                                <tr>
+                                    <td>65</td>
+                                    <td>Sales</td>
+                                    <td>Yugal Luhana</td>
+                                    <td>102</td>
+                                </tr>
+
+                                <tr>
+                                    <td>66</td>
+                                    <td>Railway</td>
+                                    <td>Rohit Jaiswar</td>
+                                    <td>148</td>
+                                </tr>
+                                <tr>
+                                    <td>67</td>
+                                    <td>Railway</td>
+                                    <td>Vaibhav</td>
+                                    <td>149</td>
+                                </tr>
+
+                                <tr>
+                                    <td>68</td>
+                                    <td>Internation</td>
+                                    <td>Shweta/ABG</td>
+                                    <td>129 / 132</td>
+                                </tr>
+                                <tr>
+                                    <td>69</td>
+                                    <td>Internation</td>
+                                    <td>Mitesh/ABG</td>
+                                    <td>125/192</td>
+                                </tr>
+                                <tr>
+                                    <td>70</td>
+                                    <td>Internation</td>
+                                    <td>Rohit / ABG</td>
+                                    <td>128/311</td>
+                                </tr>
+                                <tr>
+                                    <td>71</td>
+                                    <td>Internation</td>
+                                    <td>Siddhesh/ABG</td>
+                                    <td>123/188</td>
+                                </tr>
+                                <tr>
+                                    <td>72</td>
+                                    <td>Internation</td>
+                                    <td>Plave/ABG</td>
+                                    <td>130 / 131</td>
+                                </tr>
+                                <tr>
+                                    <td>73</td>
+                                    <td>Internation</td>
+                                    <td>Bhikaji/ABG</td>
+                                    <td>133/134</td>
+                                </tr>
+                                <tr>
+                                    <td>74</td>
+                                    <td>Internation</td>
+                                    <td>Harshada / ABG</td>
+                                    <td>135 / 193</td>
+                                </tr>
+                                <tr>
+                                    <td>75</td>
+                                    <td>Internation</td>
+                                    <td>Kuldeep Gupta</td>
+                                    <td>136/127</td>
+                                </tr>
+                                <tr>
+                                    <td>76</td>
+                                    <td>Internation</td>
+                                    <td>Vacant</td>
+                                    <td>310</td>
+                                </tr>
+                                <tr>
+                                    <td>77</td>
+                                    <td>Internation</td>
+                                    <td>Nandini / ABG</td>
+                                    <td>138 / 189</td>
+                                </tr>
+                                <tr>
+                                    <td>78</td>
+                                    <td>Internation</td>
+                                    <td>Prabhakar / ABG</td>
+                                    <td>139 / 190</td>
+                                </tr>
+                                <tr>
+                                    <td>79</td>
+                                    <td>Internation</td>
+                                    <td>Wasim/ABG</td>
+                                    <td>137/191</td>
+                                </tr>
+                                <tr>
+                                    <td>80</td>
+                                    <td>Internation</td>
+                                    <td>Vacant</td>
+                                    <td>174/179</td>
+                                </tr>
+                                <tr>
+                                    <td>81</td>
+                                    <td>Internation</td>
+                                    <td>-</td>
+                                    <td>120</td>
+                                </tr>
+
+                                <tr>
+                                    <td>82</td>
+                                    <td>IT</td>
+                                    <td>Rupesh Joshi</td>
+                                    <td>182</td>
+                                </tr>
+                                <tr>
+                                    <td>83</td>
+                                    <td>IT</td>
+                                    <td>Anupam Redij</td>
+                                    <td>330</td>
+                                </tr>
+                                <tr>
+                                    <td>84</td>
+                                    <td>IT</td>
+                                    <td>Vrushali Pagrut</td>
+                                    <td>186</td>
+                                </tr>
+                                <tr>
+                                    <td>85</td>
+                                    <td>IT</td>
+                                    <td>Richi/Ravinderkaur</td>
+                                    <td>317</td>
+                                </tr>
+                                <tr>
+                                    <td>86</td>
+                                    <td>IT</td>
+                                    <td>Rima Mehta</td>
+                                    <td>180</td>
+                                </tr>
+                                <tr>
+                                    <td>87</td>
+                                    <td>IT</td>
+                                    <td>Manoj Patil</td>
+                                    <td>181</td>
+                                </tr>
+                                <tr>
+                                    <td>88</td>
+                                    <td>IT</td>
+                                    <td>Vinod Wankhade</td>
+                                    <td>194</td>
+                                </tr>
+                                <tr>
+                                    <td>90</td>
+                                    <td>IT</td>
+                                    <td>Mahendra Ratnakar</td>
+                                    <td>184</td>
+                                </tr>
+                                <tr>
+                                    <td>91</td>
+                                    <td>IT</td>
+                                    <td>Ashish Parkar</td>
+                                    <td>113</td>
+                                </tr>
+                                <tr>
+                                    <td>92</td>
+                                    <td>IT</td>
+                                    <td>Vacant</td>
+                                    <td>185</td>
+                                </tr>
+                                <tr>
+                                    <td>93</td>
+                                    <td>IT</td>
+                                    <td>Shweta S</td>
+                                    <td>163</td>
+                                </tr>
+                                <tr>
+                                    <td>94</td>
+                                    <td>IT</td>
+                                    <td>Chandrashekar</td>
+                                    <td>317</td>
+                                </tr>
+                                <tr>
+                                    <td>95</td>
+                                    <td>IT</td>
+                                    <td>Pallavi Deshpande</td>
+                                    <td>318</td>
+                                </tr>
+                                <tr>
+                                    <td>96</td>
+                                    <td>IT</td>
+                                    <td>Ankul Gandhe</td>
+                                    <td>305</td>
+                                </tr>
+                                <tr>
+                                    <td>97</td>
+                                    <td>IT</td>
+                                    <td>Faiz/Suraj</td>
+                                    <td>337</td>
+                                </tr>
+                                <tr>
+                                    <td>98</td>
+                                    <td>IT</td>
+                                    <td>Divyatva</td>
+                                    <td>309</td>
+                                </tr>
+                                <tr>
+                                    <td>99</td>
+                                    <td>IT</td>
+                                    <td>Pravin</td>
+                                    <td>107</td>
+                                </tr>
+                                <tr>
+                                    <td>100</td>
+                                    <td>IT</td>
+                                    <td>Darshan/Abuzar</td>
+                                    <td>353</td>
+                                </tr>
+                                <tr>
+                                    <td>101</td>
+                                    <td>IT</td>
+                                    <td>Bhagyashri/Simran</td>
+                                    <td>306</td>
+                                </tr>
+                                <tr>
+                                    <td>102</td>
+                                    <td>IT</td>
+                                    <td>Bhavik/Vijay</td>
+                                    <td>338</td>
+                                </tr>
+                                <tr>
+                                    <td>103</td>
+                                    <td>IT</td>
+                                    <td>Meghana/Rajendra</td>
+                                    <td>187</td>
+                                </tr>
+                                <tr>
+                                    <td>104</td>
+                                    <td>IT</td>
+                                    <td>Shubham/Shilpa</td>
+                                    <td>164</td>
+                                </tr>
+                                <tr>
+                                    <td>105</td>
+                                    <td>IT</td>
+                                    <td>Himanshu</td>
+                                    <td>196</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-xl-2"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function openCity(evt, cityName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+        document.getElementById("defaultOpen").click();
+    </script>
+
+    <script>
+        $(document).ready(function () {
+
+            $('#example').DataTable({
+                scrollX: true,
+            });
+
+            $('#example1').DataTable({
+                scrollX: true,
+            });
+
+            $('#example2').DataTable({
+                scrollX: true,
+            });
+
+            $('#example3').DataTable({
+                scrollX: true,
+            });
+
+            $('#example4').DataTable({
+                scrollX: true,
+            });
+
+            $('#example5').DataTable({
+                scrollX: true,
+            });
+
+            $('#example6').DataTable({
+                scrollX: true,
+            });
+
+            $('#example7').DataTable({
+                scrollX: true,
+            });
+
+            $('#example8').DataTable({
+                scrollX: true,
+            });
+
+            $('#example9').DataTable({
+                scrollX: true,
+            });
+
+            $('#example10').DataTable({
+                scrollX: true,
+            });
+
+            $('#example11').DataTable({
+                scrollX: true,
+            });
+
+            $('#example12').DataTable({
+                scrollX: true,
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>
