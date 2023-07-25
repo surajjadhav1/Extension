@@ -21,8 +21,14 @@
         body {
             font-family: 'Poppins', sans-serif !important;
             font-weight: 500 !important;
-            /* color: #0000; */
             font-size: 14px !important;
+        }
+
+        .bg-image{
+            background-image: url(aa.avif);
+    background-size: cover;
+    background-position: bottom center;
+    background-attachment: fixed;
         }
 
         table.dataTable {
@@ -39,6 +45,13 @@
 
         .pad-12 {
             padding: 10px 20px !important;
+        }
+
+        .bg-clr1{
+            background-color: #d0f4ff;
+        }
+        .bg-clr2{
+            background-color: #effff7;
         }
 
 
@@ -66,7 +79,9 @@
 
         /* Create an active/current tablink class */
         .tab button.active {
-            background-color: #ccc;
+            background-color: #8feaff;
+            font-weight: 500;
+            font-size: 14px;
         }
 
         /* Style the tab content */
@@ -88,7 +103,7 @@
     </style>
 </head>
 
-<body>
+<body class="bg-image">
 
 
 <div class="container">
@@ -105,7 +120,7 @@
                     </div>
         
                     <!-- Tab content -->
-                    <div id="London" class="tabcontent" style="display: block;">
+                    <div id="London" class="tabcontent bg-light" style="display: block;">
         
                         <div class="container">
                             <div class="row my-4">
@@ -115,7 +130,7 @@
         
                                         <div class="accordion-item">
                                             <h2 class="accordion-header">
-                                                <button class="accordion-button collapsed pad-12" type="button" data-bs-toggle="collapse"
+                                                <button class="accordion-button collapsed pad-12 bg-clr1" type="button" data-bs-toggle="collapse"
                                                     data-bs-target="#c1" aria-expanded="true" aria-controls="c1">
                                                     <b>1. General</b>
                                                 </button>
@@ -135,7 +150,7 @@
                                                             <tr class="table-success">
                                                                 <td>1</td>
                                                                 <td>Reception</td>
-                                                                <td>111, 112, 308</td>
+                                                                <td>111 / 112 / 308</td>
                                                             </tr>
                                                             <tr class="table-success">
                                                                 <td>2</td>
@@ -176,7 +191,7 @@
                     
                                         <div class="accordion-item">
                                             <h2 class="accordion-header">
-                                                <button class="accordion-button collapsed pad-12" type="button" data-bs-toggle="collapse"
+                                                <button class="accordion-button collapsed pad-12  bg-clr2" type="button" data-bs-toggle="collapse"
                                                     data-bs-target="#c2" aria-expanded="false" aria-controls="c2">
                                                     <b>2. Cabin</b>
                                                 </button>
@@ -196,7 +211,7 @@
                                                             <tr>
                                                                 <td>1</td>
                                                                 <td>Abhay Sir</td>
-                                                                <td>101, 301</td>
+                                                                <td>101 / 301</td>
                                                             </tr>
                                                             <tr>
                                                                 <td>2</td>
@@ -221,7 +236,7 @@
                                                             <tr>
                                                                 <td>6</td>
                                                                 <td>Anjali madam</td>
-                                                                <td>105 , 342</td>
+                                                                <td>105 / 342</td>
                                                             </tr>
                                                             <tr>
                                                                 <td>7</td>
@@ -231,12 +246,12 @@
                                                             <tr>
                                                                 <td>8</td>
                                                                 <td>Sunil Rane</td>
-                                                                <td>319, 109</td>
+                                                                <td>319 / 109</td>
                                                             </tr>
                                                             <tr>
                                                                 <td>9</td>
                                                                 <td>Jeetendra Pagdhare</td>
-                                                                <td>116, 313</td>
+                                                                <td>116 / 313</td>
                                                             </tr>
                                                             <tr>
                                                                 <td>10</td>
@@ -257,7 +272,7 @@
                     
                                         <div class="accordion-item">
                                             <h2 class="accordion-header">
-                                                <button class="accordion-button collapsed pad-12" type="button" data-bs-toggle="collapse"
+                                                <button class="accordion-button collapsed pad-12 bg-clr1" type="button" data-bs-toggle="collapse"
                                                     data-bs-target="#c3" aria-expanded="false" aria-controls="c3">
                                                     <b>3. Domestic</b>
                                                 </button>
@@ -372,7 +387,7 @@
                     
                                         <div class="accordion-item">
                                             <h2 class="accordion-header">
-                                                <button class="accordion-button collapsed pad-12" type="button" data-bs-toggle="collapse"
+                                                <button class="accordion-button collapsed pad-12 bg-clr2" type="button" data-bs-toggle="collapse"
                                                     data-bs-target="#c4" aria-expanded="false" aria-controls="c4">
                                                     <b>4. Account</b>
                                                 </button>
@@ -458,7 +473,7 @@
                                         
                                         <div class="accordion-item">
                                             <h2 class="accordion-header">
-                                                <button class="accordion-button collapsed pad-12" type="button" data-bs-toggle="collapse"
+                                                <button class="accordion-button collapsed pad-12 bg-clr1" type="button" data-bs-toggle="collapse"
                                                     data-bs-target="#c5" aria-expanded="false" aria-controls="c5">
                                                     <b>5. GST</b>
                                                 </button>
@@ -497,7 +512,7 @@
                     
                                         <div class="accordion-item">
                                             <h2 class="accordion-header">
-                                                <button class="accordion-button collapsed pad-12" type="button" data-bs-toggle="collapse"
+                                                <button class="accordion-button collapsed pad-12 bg-clr2" type="button" data-bs-toggle="collapse"
                                                     data-bs-target="#c6" aria-expanded="false" aria-controls="c6">
                                                     <b>6. Hotels</b>
                                                 </button>
@@ -541,7 +556,7 @@
                     
                                         <div class="accordion-item">
                                             <h2 class="accordion-header">
-                                                <button class="accordion-button collapsed pad-12" type="button" data-bs-toggle="collapse"
+                                                <button class="accordion-button collapsed pad-12 bg-clr1" type="button" data-bs-toggle="collapse"
                                                     data-bs-target="#c7" aria-expanded="false" aria-controls="c7">
                                                     <b>7. Visas</b>
                                                 </button>
@@ -585,7 +600,7 @@
                     
                                         <div class="accordion-item">
                                             <h2 class="accordion-header">
-                                                <button class="accordion-button collapsed pad-12" type="button" data-bs-toggle="collapse"
+                                                <button class="accordion-button collapsed pad-12 bg-clr2" type="button" data-bs-toggle="collapse"
                                                     data-bs-target="#c8" aria-expanded="false" aria-controls="c8">
                                                     <b>8. HR Department</b>
                                                 </button>
@@ -619,7 +634,7 @@
                     
                                         <div class="accordion-item">
                                             <h2 class="accordion-header">
-                                                <button class="accordion-button collapsed pad-12" type="button" data-bs-toggle="collapse"
+                                                <button class="accordion-button collapsed pad-12 bg-clr1" type="button" data-bs-toggle="collapse"
                                                     data-bs-target="#c9" aria-expanded="false" aria-controls="c9">
                                                     <b>9. Sales</b>
                                                 </button>
@@ -663,7 +678,7 @@
                     
                                         <div class="accordion-item">
                                             <h2 class="accordion-header">
-                                                <button class="accordion-button collapsed pad-12" type="button" data-bs-toggle="collapse"
+                                                <button class="accordion-button collapsed pad-12 bg-clr2" type="button" data-bs-toggle="collapse"
                                                     data-bs-target="#c10" aria-expanded="false" aria-controls="c10">
                                                     <b>10. Railway</b>
                                                 </button>
@@ -697,7 +712,7 @@
                     
                                         <div class="accordion-item">
                                             <h2 class="accordion-header">
-                                                <button class="accordion-button collapsed pad-12" type="button" data-bs-toggle="collapse"
+                                                <button class="accordion-button collapsed pad-12 bg-clr1" type="button" data-bs-toggle="collapse"
                                                     data-bs-target="#c11" aria-expanded="false" aria-controls="c11">
                                                     <b>11. Internation</b>
                                                 </button>
@@ -721,17 +736,17 @@
                                                             <tr>
                                                                 <td>2</td>
                                                                 <td>Mitesh/ABG</td>
-                                                                <td>125/192</td>
+                                                                <td>125 / 192</td>
                                                             </tr>
                                                             <tr>
                                                                 <td>3</td>
                                                                 <td>Rohit / ABG</td>
-                                                                <td>128/311</td>
+                                                                <td>128 / 311</td>
                                                             </tr>
                                                             <tr>
                                                                 <td>4</td>
                                                                 <td>Siddhesh/ABG</td>
-                                                                <td>123/188</td>
+                                                                <td>123 / 188</td>
                                                             </tr>
                                                             <tr>
                                                                 <td>5</td>
@@ -741,7 +756,7 @@
                                                             <tr>
                                                                 <td>6</td>
                                                                 <td>Bhikaji/ABG</td>
-                                                                <td>133/134</td>
+                                                                <td>133 / 134</td>
                                                             </tr>
                                                             <tr>
                                                                 <td>7</td>
@@ -751,7 +766,7 @@
                                                             <tr>
                                                                 <td>8</td>
                                                                 <td>Kuldeep Gupta</td>
-                                                                <td>136/127</td>
+                                                                <td>136 / 127</td>
                                                             </tr>
                                                             <tr>
                                                                 <td>9</td>
@@ -771,12 +786,12 @@
                                                             <tr>
                                                                 <td>12</td>
                                                                 <td>Wasim/ABG</td>
-                                                                <td>137/191</td>
+                                                                <td>137 / 191</td>
                                                             </tr>
                                                             <tr>
                                                                 <td>13</td>
                                                                 <td>Vacant</td>
-                                                                <td>174/179</td>
+                                                                <td>174 / 179</td>
                                                             </tr>
                                                             <tr>
                                                                 <td>14</td>
@@ -791,7 +806,7 @@
                     
                                         <div class="accordion-item">
                                             <h2 class="accordion-header">
-                                                <button class="accordion-button collapsed pad-12" type="button" data-bs-toggle="collapse"
+                                                <button class="accordion-button collapsed pad-12 bg-clr2" type="button" data-bs-toggle="collapse"
                                                     data-bs-target="#c12" aria-expanded="false" aria-controls="c12">
                                                     <b>12. IT</b>
                                                 </button>
@@ -938,7 +953,7 @@
         
                     </div>
         
-                    <div id="Paris" class="tabcontent">
+                    <div id="Paris" class="tabcontent bg-light">
                         <div class="row my-4">
                             <div class="col-xl-2"></div>
                             <div class="col-xl-8 m-4 table-responsive">
@@ -956,7 +971,7 @@
                                             <td>1</td>
                                             <td>General</td>
                                             <td>Reception</td>
-                                            <td>111, 112, 308</td>
+                                            <td>111 / 112 / 308</td>
                                         </tr>
                                         <tr>
                                             <td>2</td>
@@ -999,7 +1014,7 @@
                                             <td>8</td>
                                             <td>Cabin</td>
                                             <td>Abhay Sir</td>
-                                            <td>101, 301</td>
+                                            <td>101 / 301</td>
                                         </tr>
                                         <tr>
                                             <td>9</td>
@@ -1038,25 +1053,25 @@
                                             <td>110</td>
                                         </tr>
                                         <tr>
-                                            <td>8</td>
+                                            <td>15</td>
                                             <td>Cabin</td>
                                             <td>Sunil Rane</td>
                                             <td>319, 109</td>
                                         </tr>
                                         <tr>
-                                            <td>15</td>
+                                            <td>16</td>
                                             <td>Cabin</td>
                                             <td>Jeetendra Pagdhare</td>
-                                            <td>116, 313</td>
+                                            <td>116 / 313</td>
                                         </tr>
                                         <tr>
-                                            <td>16</td>
+                                            <td>17</td>
                                             <td>Cabin</td>
                                             <td>Randolf Ferreira</td>
                                             <td>162</td>
                                         </tr>
                                         <tr>
-                                            <td>17</td>
+                                            <td>18</td>
                                             <td>Cabin</td>
                                             <td>Rahul Nagle</td>
                                             <td>114</td>
@@ -1064,55 +1079,55 @@
         
         
                                         <tr>
-                                            <td>18</td>
+                                            <td>19</td>
                                             <td>Domestic</td>
                                             <td>Aparna Prabhu</td>
                                             <td>115</td>
                                         </tr>
                                         <tr>
-                                            <td>19</td>
+                                            <td>20</td>
                                             <td>Domestic</td>
                                             <td>Anil Jaiswar</td>
                                             <td>140</td>
                                         </tr>
                                         <tr>
-                                            <td>20</td>
+                                            <td>21</td>
                                             <td>Domestic</td>
                                             <td>Yusuf Khan</td>
                                             <td>150</td>
                                         </tr>
                                         <tr>
-                                            <td>21</td>
+                                            <td>22</td>
                                             <td>Domestic</td>
                                             <td>Saabu Siddique</td>
                                             <td>143</td>
                                         </tr>
                                         <tr>
-                                            <td>22</td>
+                                            <td>23</td>
                                             <td>Domestic</td>
                                             <td>Dharamdas Kori</td>
                                             <td>144</td>
                                         </tr>
                                         <tr>
-                                            <td>23</td>
+                                            <td>24</td>
                                             <td>Domestic</td>
                                             <td>Vandana Meher</td>
                                             <td>151</td>
                                         </tr>
                                         <tr>
-                                            <td>24</td>
+                                            <td>25</td>
                                             <td>Domestic</td>
                                             <td>Vishal Salekar</td>
                                             <td>152</td>
                                         </tr>
                                         <tr>
-                                            <td>25</td>
+                                            <td>26</td>
                                             <td>Domestic</td>
                                             <td>Pooja Kshirsagar</td>
                                             <td>153</td>
                                         </tr>
                                         <tr>
-                                            <td>26</td>
+                                            <td>27</td>
                                             <td>Domestic</td>
                                             <td>Odellia Vessaokar</td>
                                             <td>312</td>
@@ -1376,19 +1391,19 @@
                                             <td>69</td>
                                             <td>Internation</td>
                                             <td>Mitesh/ABG</td>
-                                            <td>125/192</td>
+                                            <td>125 / 192</td>
                                         </tr>
                                         <tr>
                                             <td>70</td>
                                             <td>Internation</td>
                                             <td>Rohit / ABG</td>
-                                            <td>128/311</td>
+                                            <td>128 / 311</td>
                                         </tr>
                                         <tr>
                                             <td>71</td>
                                             <td>Internation</td>
                                             <td>Siddhesh/ABG</td>
-                                            <td>123/188</td>
+                                            <td>123 / 188</td>
                                         </tr>
                                         <tr>
                                             <td>72</td>
@@ -1400,7 +1415,7 @@
                                             <td>73</td>
                                             <td>Internation</td>
                                             <td>Bhikaji/ABG</td>
-                                            <td>133/134</td>
+                                            <td>133 / 134</td>
                                         </tr>
                                         <tr>
                                             <td>74</td>
@@ -1442,7 +1457,7 @@
                                             <td>80</td>
                                             <td>Internation</td>
                                             <td>Vacant</td>
-                                            <td>174/179</td>
+                                            <td>174 / 179</td>
                                         </tr>
                                         <tr>
                                             <td>81</td>
@@ -1494,97 +1509,97 @@
                                             <td>194</td>
                                         </tr>
                                         <tr>
-                                            <td>90</td>
+                                            <td>89</td>
                                             <td>IT</td>
                                             <td>Mahendra Ratnakar</td>
                                             <td>184</td>
                                         </tr>
                                         <tr>
-                                            <td>91</td>
+                                            <td>90</td>
                                             <td>IT</td>
                                             <td>Ashish Parkar</td>
                                             <td>113</td>
                                         </tr>
                                         <tr>
-                                            <td>92</td>
+                                            <td>91</td>
                                             <td>IT</td>
                                             <td>Vacant</td>
                                             <td>185</td>
                                         </tr>
                                         <tr>
-                                            <td>93</td>
+                                            <td>92</td>
                                             <td>IT</td>
                                             <td>Shweta S</td>
                                             <td>163</td>
                                         </tr>
                                         <tr>
-                                            <td>94</td>
+                                            <td>93</td>
                                             <td>IT</td>
                                             <td>Chandrashekar</td>
                                             <td>317</td>
                                         </tr>
                                         <tr>
-                                            <td>95</td>
+                                            <td>94</td>
                                             <td>IT</td>
                                             <td>Pallavi Deshpande</td>
                                             <td>318</td>
                                         </tr>
                                         <tr>
-                                            <td>96</td>
+                                            <td>95</td>
                                             <td>IT</td>
                                             <td>Ankul Gandhe</td>
                                             <td>305</td>
                                         </tr>
                                         <tr>
-                                            <td>97</td>
+                                            <td>96</td>
                                             <td>IT</td>
                                             <td>Faiz/Suraj</td>
                                             <td>337</td>
                                         </tr>
                                         <tr>
-                                            <td>98</td>
+                                            <td>97</td>
                                             <td>IT</td>
                                             <td>Divyatva</td>
                                             <td>309</td>
                                         </tr>
                                         <tr>
-                                            <td>99</td>
+                                            <td>98</td>
                                             <td>IT</td>
                                             <td>Pravin</td>
                                             <td>107</td>
                                         </tr>
                                         <tr>
-                                            <td>100</td>
+                                            <td>99</td>
                                             <td>IT</td>
                                             <td>Darshan/Abuzar</td>
                                             <td>353</td>
                                         </tr>
                                         <tr>
-                                            <td>101</td>
+                                            <td>100</td>
                                             <td>IT</td>
                                             <td>Bhagyashri/Simran</td>
                                             <td>306</td>
                                         </tr>
                                         <tr>
-                                            <td>102</td>
+                                            <td>101</td>
                                             <td>IT</td>
                                             <td>Bhavik/Vijay</td>
                                             <td>338</td>
                                         </tr>
                                         <tr>
-                                            <td>103</td>
+                                            <td>102</td>
                                             <td>IT</td>
                                             <td>Meghana/Rajendra</td>
                                             <td>187</td>
                                         </tr>
                                         <tr>
-                                            <td>104</td>
+                                            <td>103</td>
                                             <td>IT</td>
                                             <td>Shubham/Shilpa</td>
                                             <td>164</td>
                                         </tr>
                                         <tr>
-                                            <td>105</td>
+                                            <td>104</td>
                                             <td>IT</td>
                                             <td>Himanshu</td>
                                             <td>196</td>
